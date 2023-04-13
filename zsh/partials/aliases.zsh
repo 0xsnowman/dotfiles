@@ -8,10 +8,14 @@ alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resourc
 alias mux="tmuxinator"
 alias npmsd="npm install --save-dev"
 alias psa="ps aux"
-alias r="ranger"
 alias rl="source ~/.zshrc"
 alias ss='open -a ScreenSaverEngine'
 alias v='vim $(fzf --height=25)'
+
+# cargo
+alias cb="cargo build"
+alias cr="cargo run"
+alias crb="cargo run --bin"
 
 # docker
 alias db="docker build"
@@ -29,6 +33,7 @@ alias dcu="docker-compose up"
 
 # git
 alias ga="git add -A"
+alias gan="git add -AN"
 alias gap="git add -p"
 alias gb="git branch"
 alias gc="git commit"
@@ -49,11 +54,17 @@ alias gp="git pull"
 alias gpr="git pull --rebase"
 alias gpu="git push"
 alias gr="git rebase"
+alias gra="git rebase --abort"
+alias grc="git rebase --continue"
 alias grh="git reset HEAD"
 alias grhh="git reset HEAD --hard"
+alias gri="git rebase -i"
 alias grm="git rm"
+alias gron="git rebase --onto"
+alias grs="git reset --soft"
 alias gs="git st"
 alias gsa="git stash apply"
+alias gsh="git show"
 alias gsl="git stash list"
 alias gss="git stash show"
 alias gst="git status"
@@ -97,5 +108,6 @@ alias -s txt='less'
 alias -s {css,haml,js,jsx,md,py,rb,zsh}=vim
 
 if [[ -n $SPIN ]]; then
+  alias dds="dev debug server"
   alias j="dev cd"
 fi

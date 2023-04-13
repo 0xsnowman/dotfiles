@@ -1,35 +1,14 @@
 *.zwc
 .DS_Store
 
-bitbar/enabled/*
-!bitbar/enabled/.keep
+.config/nvim/tmp/*
+!.config/nvim/tmp/.gitkeep
 
-vim/plugged/*
-!vim/plugged/.gitkeep
+.config/nvim/.netrwhist
+.config/nvim/lazy-lock.json
 
-vim/tmp/*
-!vim/tmp/.gitkeep
-
-vim/virtual/*
-!vim/virtual/.gitkeep
-
-vim/langserver/*
-!vim/langserver/.gitkeep
-
-vim/.netrwhist
-vim/plugin/packer_compiled.lua
-
-ranger/plugins/__init__.*
-ranger/plugins/*.pyo
+.config/tmux/plugins/*
 
 __pycache__
 
 profile.log
-
-.vim/
-
-streamdeck/*.png
-
-.luarc.json
-
-vim/lazy-lock.json

@@ -2,14 +2,10 @@
 
 set -x
 
-VIMPATH="$HOME/dotfiles/vim"
+VIMPATH="$HOME/dotfiles/.config/nvim"
 
 install_standard() {
   ln -s "$VIMPATH" "$HOME/.config/nvim"
-
-  pip3 install --upgrade pynvim
-  gem install neovim
-  yarn global add neovim
 }
 
 install_macos() {
@@ -25,15 +21,9 @@ install_ubuntu() {
     sudo add-apt-repository -y ppa:neovim-ppa/unstable
     sudo apt-get update
     sudo apt-get install -y neovim
-  else
-    sudo zsh -c 'dpkg -i =(curl -L https://github.com/neovim/neovim/releases/download/v0.8.3/nvim-linux64.deb)'
   fi
 
   install_standard
-
-  if [[ -z $SPIN ]]; then
-    nvim +PlugInstall +qall >/dev/null
-  fi
 }
 
 update_python() {
@@ -48,7 +38,6 @@ update() {
   update_python
   gem update neovim
   yarn global add neovim
-  [[ -z $SPIN ]] && nvim +PlugUpgrade +PlugUpdate +UpdateRemotePlugins +qall >/dev/null
 }
 
 case "$1" in
